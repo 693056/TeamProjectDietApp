@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Diet&amp;Health</string>
+    <string name="home">home</string>
+    <string name="calendar">calendar</string>
+    <string name="recipes">recipes</string>
+    <string name="my_progress">my_progress</string>
+    <string name="monday_january_10th">monday_january_10th</string>
+    <string name="welcome_back_john">Welcome Back, John</string>
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="activity_array">
+        <item>High Activity</item>
+        <item>High-Medium Activity</item>
+        <item>Medium Activity</item>
+        <item>Low-Medium Activity</item>
+        <item>Low Activity</item>
+    </string-array>
+    <string-array name="ingredient_array">
+        <item>Large Egg</item>
+        <item>Whole Wheat Bread</item>
+        <item>Cooked Broccoli</item>
+        <item>Chicken Breast</item>
+        <item>Apple</item>
+        <item>Fasting</item>
+        <item>Oatmeal</item>
+        <item>Raw Spinach</item>
+        <item>Sweet Potato</item>
+        <item>White Rice</item>
+        <item>Brown Rice</item>
+        <item>Lentils</item>
+    </string-array>
+</resources>
