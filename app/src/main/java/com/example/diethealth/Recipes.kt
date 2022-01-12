@@ -86,18 +86,20 @@ class Recipes : AppCompatActivity() {
             }
             var ingredientDrawable = when(selectedIngredient){
                 "Large Egg" -> R.drawable.egg
-                "Whole Wheat Bread" -> R.drawable.egg
-                "Cooked Broccoli" -> R.drawable.egg
-                "Chicken Breast" -> R.drawable.egg
-                "Apple" -> R.drawable.egg
-                "Fasting" -> R.drawable.egg
-                "Oatmeal" -> R.drawable.egg
-                "Raw Spinach" -> R.drawable.egg
-                "Sweet Potato" -> R.drawable.egg
-                "White Rice" -> R.drawable.egg
-                "Brown Rice" -> R.drawable.egg
-                else -> R.drawable.egg
+                "Whole Wheat Bread" -> R.drawable.bread
+                "Cooked Broccoli" -> R.drawable.broccoli
+                "Chicken Breast" -> R.drawable.chicken
+                "Apple" -> R.drawable.apple
+                "Fasting" -> R.drawable.fasting
+                "Oatmeal" -> R.drawable.oatmeal
+                "Raw Spinach" -> R.drawable.spinach
+                "Sweet Potato" -> R.drawable.sweet_potato
+                "White Rice" -> R.drawable.white_rice
+                "Brown Rice" -> R.drawable.brown_rice
+                else -> R.drawable.lentils
             }
+            ingredientImage.setImageResource(ingredientDrawable)
+
 
             addedIngredient.amount = binding.amountEditText.text.toString().toDouble()
             ingredientList.add(addedIngredient)
