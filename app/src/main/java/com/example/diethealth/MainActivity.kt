@@ -9,10 +9,15 @@ import com.example.diethealth.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +50,11 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(0,0)
             startActivity(intent)
         }
+        //database variables
+        //var database = FirebaseDatabase.getInstance()
+
+        database = Firebase.database.reference
+       //var dataReference = database.getReference("userInfo")
 
         var user = User()
         val genders = resources.getStringArray(R.array.gender_array)
@@ -77,6 +87,9 @@ class MainActivity : AppCompatActivity() {
                     user.activityLevel = 1.9
                 }
                 binding.testTextview.text = user.gender.toString()
+                //adding user to database
+                //dataReference.child(user.name).push().setValue(user)
+                database.child("test").child(user.name).setValue(user)
             } else {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
             }
